@@ -1,0 +1,14 @@
+$ tsup src/index.ts --format esm,cjs --dts
+CLI Building entry: src/index.ts
+CLI Using tsconfig: tsconfig.json
+CLI tsup v5.12.9
+CLI Target: node12
+ESM Build start
+CJS Build start
+ESM ⚡️ Build success in 163ms
+ESM dist/index.mjs 14.75 KB
+CJS ⚡️ Build success in 132ms
+CJS dist/index.js 18.74 KB
+DTS Build start
+DTS ⚡️ Build success in 15731ms
+DTS dist/index.d.ts 9.71 KB
