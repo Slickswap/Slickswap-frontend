@@ -5,10 +5,10 @@ CLI tsup v5.12.9
 CLI Target: node12
 ESM Build start
 CJS Build start
-ESM ⚡️ Build success in 163ms
-ESM dist/index.mjs 14.75 KB
-CJS ⚡️ Build success in 132ms
+CJS ⚡️ Build success in 304ms
 CJS dist/index.js 18.74 KB
+ESM ⚡️ Build success in 575ms
+ESM dist/index.mjs 14.75 KB
 DTS Build start
-DTS ⚡️ Build success in 15731ms
+DTS ⚡️ Build success in 15470ms
 DTS dist/index.d.ts 9.71 KB

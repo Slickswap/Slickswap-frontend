@@ -3,22 +3,22 @@ $ tsup
 CLI Building entry: {"index":"src/index.ts","connectors/miniProgram":"connectors/miniProgram/index.ts","connectors/binanceWallet":"connectors/binanceWallet/index.ts","chains":"chains/index.ts"}
 CLI Using tsconfig: tsconfig.json
 CLI tsup v5.12.9
-CLI Using tsup config: /home/dezzy/Documents/gig/IceCreamSwapUiNew/packages/wagmi/tsup.config.ts
+CLI Using tsup config: /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/wagmi/tsup.config.ts
 CLI Target: node12
 ESM Build start
 CJS Build start
-ESM ⚡️ Build success in 167ms
-CJS ⚡️ Build success in 163ms
+ESM ⚡️ Build success in 255ms
+CJS ⚡️ Build success in 269ms
 ESM dist/index.mjs                    2.25 KB
 ESM dist/connectors/miniProgram.mjs   2.14 KB
 ESM dist/connectors/binanceWallet.mjs 3.09 KB
-ESM dist/chains.mjs                   6.97 KB
+ESM dist/chains.mjs                   7.79 KB
 CJS dist/index.js                    3.84 KB
 CJS dist/connectors/miniProgram.js   3.22 KB
 CJS dist/connectors/binanceWallet.js 4.17 KB
-CJS dist/chains.js                   7.95 KB
+CJS dist/chains.js                   8.77 KB
 DTS Build start
-DTS ⚡️ Build success in 22667ms
+DTS ⚡️ Build success in 21417ms
 DTS dist/index.d.ts                    1013.00 B
 DTS dist/connectors/miniProgram.d.ts   803.00 B
 DTS dist/connectors/binanceWallet.d.ts 1.23 KB

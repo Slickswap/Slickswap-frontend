@@ -77,7 +77,7 @@ function MyApp(props: AppProps<{ initialReduxState: any }>) {
           name="description"
           content="Multi-chain DeFi ecosystem with Swap, Bridge and Launchpad. Trade, Bridge, Earn and Launch on Bitgert (Brise), Binance smart chain (BSC), XDC, Dogechain, Doken, Fuse and soon CORE blockchain"
         />
-        <meta name="theme-color" content="#F8567F" />
+        <meta name="theme-color" content="#00aff6" />
         <meta name="twitter:image" content="https://icecreamswap.com/images/hero.png" />
         <meta
           name="twitter:description"

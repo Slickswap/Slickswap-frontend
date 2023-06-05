@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import Image from "next/image";
-import IceCream from "../../img/icecream.png";
+import IceCream from "../../img/slickswap.png";
 import { SpinnerProps } from "./types";
 
 const rotate = keyframes`

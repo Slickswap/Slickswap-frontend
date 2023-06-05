@@ -1,23 +1,23 @@
 $ npx tsx scripts/build.ts
 save farm config...
 Starting build farm config 56
-Farm list saved to  /home/dezzy/Documents/gig/IceCreamSwapUiNew/packages/farms/lists/56.json
-Lp list saved to  /home/dezzy/Documents/gig/IceCreamSwapUiNew/packages/farms/lists/priceHelperLps/56.json
+Farm list saved to  /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/farms/lists/56.json
+Lp list saved to  /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/farms/lists/priceHelperLps/56.json
 Starting build farm config 32520
-Farm list saved to  /home/dezzy/Documents/gig/IceCreamSwapUiNew/packages/farms/lists/32520.json
-Lp list saved to  /home/dezzy/Documents/gig/IceCreamSwapUiNew/packages/farms/lists/priceHelperLps/32520.json
+Farm list saved to  /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/farms/lists/32520.json
+Lp list saved to  /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/farms/lists/priceHelperLps/32520.json
 Starting build farm config 2000
-Farm list saved to  /home/dezzy/Documents/gig/IceCreamSwapUiNew/packages/farms/lists/2000.json
-Lp list saved to  /home/dezzy/Documents/gig/IceCreamSwapUiNew/packages/farms/lists/priceHelperLps/2000.json
+Farm list saved to  /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/farms/lists/2000.json
+Lp list saved to  /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/farms/lists/priceHelperLps/2000.json
 Starting build farm config 61916
-Farm list saved to  /home/dezzy/Documents/gig/IceCreamSwapUiNew/packages/farms/lists/61916.json
-Lp list saved to  /home/dezzy/Documents/gig/IceCreamSwapUiNew/packages/farms/lists/priceHelperLps/61916.json
+Farm list saved to  /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/farms/lists/61916.json
+Lp list saved to  /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/farms/lists/priceHelperLps/61916.json
 Starting build farm config 122
-Farm list saved to  /home/dezzy/Documents/gig/IceCreamSwapUiNew/packages/farms/lists/122.json
-Lp list saved to  /home/dezzy/Documents/gig/IceCreamSwapUiNew/packages/farms/lists/priceHelperLps/122.json
+Farm list saved to  /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/farms/lists/122.json
+Lp list saved to  /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/farms/lists/priceHelperLps/122.json
 Starting build farm config 50
-Farm list saved to  /home/dezzy/Documents/gig/IceCreamSwapUiNew/packages/farms/lists/50.json
-Lp list saved to  /home/dezzy/Documents/gig/IceCreamSwapUiNew/packages/farms/lists/priceHelperLps/50.json
+Farm list saved to  /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/farms/lists/50.json
+Lp list saved to  /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/farms/lists/priceHelperLps/50.json
 Starting build farm config 1116
-Farm list saved to  /home/dezzy/Documents/gig/IceCreamSwapUiNew/packages/farms/lists/1116.json
-Lp list saved to  /home/dezzy/Documents/gig/IceCreamSwapUiNew/packages/farms/lists/priceHelperLps/1116.json
+Farm list saved to  /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/farms/lists/1116.json
+Lp list saved to  /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/farms/lists/priceHelperLps/1116.json

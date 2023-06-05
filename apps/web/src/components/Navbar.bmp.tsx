@@ -5,8 +5,8 @@ import useTheme from 'hooks/useTheme'
 import { useSystemInfo, bridgeUtils } from 'utils/mpBridge'
 
 const title = {
-  dark: '/images/icecream.png',
-  light: '/images/icecream.png',
+  dark: '/images/slickswap.png',
+  light: '/images/slickswap.png',
 }
 const StyledWallet = styled(Flex)<{ isActive: boolean }>`
   padding: 6px 11px;
