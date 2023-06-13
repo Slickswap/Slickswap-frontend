@@ -45,7 +45,7 @@ export const ROUTER_ADDRESS: Partial<ChainMap<RouterAddressTypes>> = {
 export const BASES_TO_CHECK_TRADES_AGAINST: Partial<ChainTokenList> = {
   [ChainId.BITGERT]: [bitgertTokens.wbrise, bitgertTokens.ice, bitgertTokens.usdci, bitgertTokens.usdti],
   [ChainId.DOGE]: [dogechainTokens.wdoge, dogechainTokens.ice],
-  [ChainId.DOGE]: [baseTokens.weth, baseTokens.slick],
+  [ChainId.BASE]: [baseTokens.weth, baseTokens.slick],
   [ChainId.DOKEN]: [dokenTokens.wdkn, dokenTokens.ice, dokenTokens.usdt],
   [ChainId.FUSE]: [fuseTokens.wfuse, fuseTokens.ice],
   [ChainId.XDC]: [xdcTokens.wxdc, xdcTokens.ice, xdcTokens.usdt],
@@ -118,7 +118,7 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: Partial<ChainTokenList> = {
     bitgertTokens.lung,
   ],
   [ChainId.DOGE]: [dogechainTokens.wdoge, dogechainTokens.ice],
-  [ChainId.DOGE]: [baseTokens.weth, baseTokens.slick],
+  [ChainId.BASE]: [baseTokens.weth, baseTokens.slick],
   [ChainId.DOKEN]: [dokenTokens.wdkn, dokenTokens.ice, dokenTokens.usdt],
   [ChainId.FUSE]: [fuseTokens.wfuse, fuseTokens.ice],
   [ChainId.XDC]: [xdcTokens.wxdc, xdcTokens.ice, xdcTokens.usdt, xdcTokens.usdc],
