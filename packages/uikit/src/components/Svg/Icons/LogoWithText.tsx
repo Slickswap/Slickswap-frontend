@@ -2,12 +2,14 @@ import { vars } from "@pancakeswap/ui/css/vars.css";
 import React from "react";
 import Svg from "../Svg";
 import { SvgProps } from "../types";
+import { marginRight } from "styled-system";
 
 const Logo: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
   return (
     <div {...props} style={{ alignItems: "center", ...props.style }}>
-      <img src="/images/slickswap.png" alt="IceCream" width="32px" style={{ verticalAlign: "middle" }} />
-      <span style={{ verticalAlign: "middle", fontSize: "1.2rem", fontWeight: "bold" }}>IceCreamSwap</span>
+      <img src="/images/slickswap.png" alt="slickswap" width="32px" style={{ verticalAlign: "middle" }} />
+      {/* <span style={{ verticalAlign: "middle", fontSize: "1.2rem", fontWeight: "bold" }}>IceCreamSwap</span> */}
+      <img src="/images/SlickSwap.png" alt="slickswap" width="95%" style={{ verticalAlign: "middle" }} />
     </div>
   );
 

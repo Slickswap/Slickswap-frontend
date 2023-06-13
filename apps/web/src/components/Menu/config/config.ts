@@ -10,8 +10,8 @@ import {
   DropdownMenuItemType,
   RocketIcon,
   MoreHorizontalIcon,
-} from '@pancakeswap/uikit'
-import { ContextApi } from '@pancakeswap/localization'
+} from "@pancakeswap/uikit";
+import { ContextApi } from "@pancakeswap/localization";
 import {
   SUPPORT_FARMS,
   SUPPORT_STAKING,
@@ -19,47 +19,50 @@ import {
   SUPPORT_SWAP,
   SUPPORT_BRIDGE,
   SUPPORT_LOCKS,
-} from '../../../config/constants/supportChains'
+} from "../../../config/constants/supportChains";
 
 export type ConfigMenuDropDownItemsType = DropdownMenuItems & {
-  hideSubNav?: boolean
-  items?: ConfigMenuDropDownItemsType[]
-}
-export type ConfigMenuItemsType = Omit<MenuItemsType, 'items'> & { hideSubNav?: boolean; image?: string } & {
-  items?: ConfigMenuDropDownItemsType[]
-}
+  hideSubNav?: boolean;
+  items?: ConfigMenuDropDownItemsType[];
+};
+export type ConfigMenuItemsType = Omit<MenuItemsType, "items"> & {
+  hideSubNav?: boolean;
+  image?: string;
+} & {
+  items?: ConfigMenuDropDownItemsType[];
+};
 
 const addMenuItemSupported = (item, chainId) => {
   if (!chainId || !item.supportChainIds) {
-    return item
+    return item;
   }
   if (item.supportChainIds?.includes(chainId)) {
-    return item
+    return item;
   }
   return {
     ...item,
     disabled: true,
-  }
-}
+  };
+};
 
 const config: (
-  t: ContextApi['t'],
+  t: ContextApi["t"],
   isDark: boolean,
   languageCode?: string,
-  chainId?: number,
+  chainId?: number
 ) => ConfigMenuItemsType[] = (t, isDark, languageCode, chainId) =>
   [
     {
-      label: t('Trade'),
+      label: t("Trade"),
       icon: SwapIcon,
       fillIcon: SwapFillIcon,
-      href: '/swap',
+      href: "/swap",
       supportChainIds: SUPPORT_SWAP,
       showItemsOnMobile: false,
       items: [
         {
-          label: t('Swap'),
-          href: '/swap',
+          label: t("Swap"),
+          href: "/swap",
         },
         /*
         {
@@ -70,8 +73,8 @@ const config: (
         },
            */
         {
-          label: t('Liquidity'),
-          href: '/liquidity',
+          label: t("Liquidity"),
+          href: "/liquidity",
         },
         /*
         {
@@ -91,29 +94,29 @@ const config: (
       ].map((item) => addMenuItemSupported(item, chainId)),
     },
     {
-      label: t('Earn'),
-      href: '/farms',
+      label: t("Earn"),
+      href: "/farms",
       icon: EarnIcon,
       fillIcon: EarnFillIcon,
-      image: '/images/decorations/pe2.png',
+      image: "/images/decorations/pe2.png",
       showItemsOnMobile: false,
       supportChainIds: [...SUPPORT_FARMS, ...SUPPORT_STAKING],
       items: [
         {
-          label: t('Liquidity Farms'),
-          href: '/farms',
+          label: t("Liquidity Farms"),
+          href: "/farms",
           supportChainIds: SUPPORT_FARMS,
         },
         {
-          label: t('Staking'),
-          href: '/pools',
+          label: t("Staking"),
+          href: "/pools",
           supportChainIds: SUPPORT_STAKING,
         },
       ].map((item) => addMenuItemSupported(item, chainId)),
     },
     {
-      label: t('Bridge'),
-      href: '/bridge',
+      label: t("Bridge"),
+      href: "/bridge",
       hideSubNav: true,
       icon: BridgeIcon,
       supportChainIds: SUPPORT_BRIDGE,
@@ -187,64 +190,64 @@ const config: (
     },
     */
     {
-      label: t('Launchpad'),
-      href: '/launchpad',
+      label: t("Launchpad"),
+      href: "/launchpad",
       icon: RocketIcon,
       hideSubNav: true,
       showItemsOnMobile: false,
       items: [],
     },
     {
-      label: t('More'),
+      label: t("More"),
       icon: MoreHorizontalIcon,
       showItemsOnMobile: true,
       hideSubNav: true,
       supportChainIds: [...SUPPORT_INFO, ...SUPPORT_LOCKS],
       items: [
         {
-          label: t('Info'),
-          href: '/info',
+          label: t("Info"),
+          href: "/info",
           supportChainIds: SUPPORT_INFO,
         },
         {
-          label: t('Locks'),
-          href: '/locks',
+          label: t("Locks"),
+          href: "/locks",
           supportChainIds: SUPPORT_LOCKS,
         },
         {
-          label: t('KYC'),
-          href: '/kyc',
+          label: t("KYC"),
+          href: "/kyc",
           supportChainIds: [1116],
           items: [
             {
-              label: t('KYC'),
-              href: '/kyc',
+              label: t("KYC"),
+              href: "/kyc",
             },
             {
-              label: t('KYC Checker'),
-              href: '/kyc-checker',
+              label: t("KYC Checker"),
+              href: "/kyc-checker",
             },
           ],
         },
 
         {
-          label: t('KYC Checker'),
-          href: '/kyc-checker',
+          label: t("KYC Checker"),
+          href: "/kyc-checker",
           supportChainIds: [1116],
           items: [
             {
-              label: t('KYC'),
-              href: '/kyc',
+              label: t("KYC"),
+              href: "/kyc",
             },
             {
-              label: t('KYC Checker'),
-              href: '/kyc-checker',
+              label: t("KYC Checker"),
+              href: "/kyc-checker",
             },
           ],
         },
         {
-          label: t('Wiki'),
-          href: 'https://wiki.icecreamswap.com',
+          label: t("Wiki"),
+          href: "https://wiki.icecreamswap.com",
           type: DropdownMenuItemType.EXTERNAL_LINK,
         },
         // {
@@ -302,6 +305,6 @@ const config: (
       ].map((item) => addMenuItemSupported(item, chainId)),
     },
        */
-  ].map((item) => addMenuItemSupported(item, chainId))
+  ].map((item) => addMenuItemSupported(item, chainId));
 
-export default config
+export default config;
