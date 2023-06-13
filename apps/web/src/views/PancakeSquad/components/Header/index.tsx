@@ -1,39 +1,42 @@
-import Link from 'next/link'
-import { Box, Flex, lightColors, Spinner, Text, Timeline } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
-import { useGetCakeBalance } from 'hooks/useTokenBalance'
-import useTheme from 'hooks/useTheme'
-import { StyledWaveContainer } from 'views/PancakeSquad/styles'
-import { UserStatusEnum } from 'views/PancakeSquad/types'
-import ConnectWalletButton from 'components/ConnectWalletButton'
-import HeaderBottomWave from '../../assets/HeaderBottomWave'
-import nftSaleConfigBuilder from '../../config'
-import CtaButtons from './CtaButtons'
-import MintText from './MintText'
-import PreEventText from './PreEventText'
-import SaleProgress from './SaleProgress'
+import Link from "next/link";
+import {
+  Box,
+  Flex,
+  lightColors,
+  Spinner,
+  Text,
+  Timeline,
+} from "@pancakeswap/uikit";
+import { useTranslation } from "@pancakeswap/localization";
+import { useGetCakeBalance } from "hooks/useTokenBalance";
+import useTheme from "hooks/useTheme";
+import { StyledWaveContainer } from "views/PancakeSquad/styles";
+import { UserStatusEnum } from "views/PancakeSquad/types";
+import ConnectWalletButton from "components/ConnectWalletButton";
+import HeaderBottomWave from "../../assets/HeaderBottomWave";
+import nftSaleConfigBuilder from "../../config";
+import CtaButtons from "./CtaButtons";
+import MintText from "./MintText";
+import PreEventText from "./PreEventText";
+import SaleProgress from "./SaleProgress";
 import {
   StyledSquadEventBorder,
   StyledSquadEventContainer,
   StyledSquadHeaderContainer,
   StyledSquadTitle,
-} from './styles'
-import { PancakeSquadHeaderType } from './types'
+} from "./styles";
+import { PancakeSquadHeaderType } from "./types";
 
-const DEFAULT_ICE_COST = 15
-const DEFAULT_MAX_TICKETS = 10
+const DEFAULT_ICE_COST = 15;
+const DEFAULT_MAX_TICKETS = 10;
 
-const PancakeSquadHeader: React.FC<React.PropsWithChildren<PancakeSquadHeaderType>> = ({
-  userInfos,
-  eventInfos,
-  account,
-  userStatus,
-  isLoading,
-}) => {
-  const { t } = useTranslation()
-  const { theme, isDark } = useTheme()
-  const { balance: cakeBalance } = useGetCakeBalance()
-  const displayEventBlock = !!eventInfos || isLoading
+const PancakeSquadHeader: React.FC<
+  React.PropsWithChildren<PancakeSquadHeaderType>
+> = ({ userInfos, eventInfos, account, userStatus, isLoading }) => {
+  const { t } = useTranslation();
+  const { theme, isDark } = useTheme();
+  const { balance: cakeBalance } = useGetCakeBalance();
+  const displayEventBlock = !!eventInfos || isLoading;
   const {
     ticketsOfUser,
     numberTicketsUsedForGen0,
@@ -41,7 +44,7 @@ const PancakeSquadHeader: React.FC<React.PropsWithChildren<PancakeSquadHeaderTyp
     numberTicketsForGen0,
     canClaimForGen0,
     numberTokensOfUser,
-  } = userInfos || {}
+  } = userInfos || {};
 
   const {
     maxPerAddress,
@@ -52,49 +55,60 @@ const PancakeSquadHeader: React.FC<React.PropsWithChildren<PancakeSquadHeaderTyp
     totalTicketsDistributed,
     totalSupplyMinted,
     startTimestamp,
-  } = eventInfos || {}
+  } = eventInfos || {};
 
   return (
     <StyledSquadHeaderContainer
-      pt={['16px', null, null, '40px']}
-      px={['16px', null, null, '80px']}
+      pt={["16px", null, null, "40px"]}
+      px={["16px", null, null, "80px"]}
       flexDirection="column"
       alignItems="center"
     >
       <Flex width="100%">
         <Link href="/nfts" passHref prefetch={false}>
-          <Text as="a" color="primary" bold>{`< ${t('NFT Marketplace')}`}</Text>
+          <Text as="a" color="primary" bold>{`< ${t("NFT Marketplace")}`}</Text>
         </Link>
       </Flex>
-      <StyledSquadTitle my="32px" color={lightColors.invertedContrast} bold textAlign="center">
-        {t('Pancake Squad')}
+      <StyledSquadTitle
+        my="32px"
+        color={lightColors.invertedContrast}
+        bold
+        textAlign="center"
+      >
+        {t("Pancake Squad")}
       </StyledSquadTitle>
       <Text color={lightColors.warning} textAlign="center" bold>
-        {`${t('Presale:')} 04:00 UTC, Oct. 7`}
+        {`${t("Presale:")} 04:00 UTC, Oct. 7`}
       </Text>
       <Text color={lightColors.warning} textAlign="center" bold>
-        {`${t('Public Sale:')} 08:00 UTC, Oct. 7`}
+        {`${t("Public Sale:")} 08:00 UTC, Oct. 7`}
       </Text>
       <Text color={lightColors.warning} textAlign="center" bold>
-        {t('Mint Cost: %minCost% ICE each', {
+        {t("Mint Cost: %minCost% ICE each", {
           minCost: DEFAULT_ICE_COST,
         })}
       </Text>
       <Text color={lightColors.warning} textAlign="center" bold>
-        {t('Max per wallet: %maxPerWallet%', { maxPerWallet: DEFAULT_MAX_TICKETS })}
+        {t("Max per wallet: %maxPerWallet%", {
+          maxPerWallet: DEFAULT_MAX_TICKETS,
+        })}
       </Text>
       <Text color={lightColors.invertedContrast} textAlign="center">
-        {t('PancakeSwap’s first official generative NFT collection.')}
+        {t("PancakeSwap’s first official generative NFT collection.")}
       </Text>
-      <Text color={lightColors.invertedContrast} mb={!displayEventBlock ? '80px' : '32px'} textAlign="center">
-        {t('Join the squad.')}
+      <Text
+        color={lightColors.invertedContrast}
+        mb={!displayEventBlock ? "80px" : "32px"}
+        textAlign="center"
+      >
+        {t("Join the squad.")}
       </Text>
       {displayEventBlock && (
         <StyledSquadEventBorder mb="56px">
           <StyledSquadEventContainer m="1px" p="32px">
-            <Flex flexDirection={['column', null, 'row']}>
+            <Flex flexDirection={["column", null, "row"]}>
               {eventInfos && (
-                <Box mr={['0', null, null, '100px']}>
+                <Box mr={["0", null, null, "100px"]}>
                   <Timeline
                     events={nftSaleConfigBuilder({
                       t,
@@ -108,7 +122,11 @@ const PancakeSquadHeader: React.FC<React.PropsWithChildren<PancakeSquadHeaderTyp
               <Flex flexDirection="column">
                 {eventInfos && (
                   <>
-                    <PreEventText t={t} userStatus={userStatus} saleStatus={saleStatus} />
+                    <PreEventText
+                      t={t}
+                      userStatus={userStatus}
+                      saleStatus={saleStatus}
+                    />
                     <SaleProgress
                       t={t}
                       userStatus={userStatus}
@@ -150,7 +168,12 @@ const PancakeSquadHeader: React.FC<React.PropsWithChildren<PancakeSquadHeaderTyp
                     )}
                   </>
                 )}
-                {isLoading && (userStatus === UserStatusEnum.UNCONNECTED ? <ConnectWalletButton /> : <Spinner />)}
+                {isLoading &&
+                  (userStatus === UserStatusEnum.UNCONNECTED ? (
+                    <ConnectWalletButton />
+                  ) : (
+                    <Spinner />
+                  ))}
               </Flex>
             </Flex>
           </StyledSquadEventContainer>
@@ -160,7 +183,7 @@ const PancakeSquadHeader: React.FC<React.PropsWithChildren<PancakeSquadHeaderTyp
         <HeaderBottomWave isDark={isDark} />
       </StyledWaveContainer>
     </StyledSquadHeaderContainer>
-  )
-}
+  );
+};
 
-export default PancakeSquadHeader
+export default PancakeSquadHeader;

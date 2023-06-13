@@ -1,18 +1,19 @@
-import { Flex, IconButton, CogIcon, useModal } from '@pancakeswap/uikit'
-import SettingsModal from './SettingsModal'
+import { Flex, IconButton, CogIcon, useModal } from "@pancakeswap/uikit";
+import SettingsModal from "./SettingsModal";
 
 type Props = {
-  color?: string
-  mr?: string
-  mode?: string
-}
+  color?: string;
+  mr?: string;
+  mode?: string;
+};
 
-const GlobalSettings = ({ color, mr = '8px', mode }: Props) => {
-  const [onPresentSettingsModal] = useModal(<SettingsModal mode={mode} />)
+const GlobalSettings = ({ color, mr = "8px", mode }: Props) => {
+  const [onPresentSettingsModal] = useModal(<SettingsModal mode={mode} />);
 
   return (
     <Flex>
       <IconButton
+        style={{ color: "#fff" }}
         onClick={onPresentSettingsModal}
         variant="text"
         scale="sm"
@@ -20,10 +21,10 @@ const GlobalSettings = ({ color, mr = '8px', mode }: Props) => {
         id={`open-settings-dialog-button-${mode}`}
         aria-label="Settings"
       >
-        <CogIcon height={24} width={24} color={color || 'textSubtle'} />
+        <CogIcon height={24} width={24} color={color || "textSubtle"} />
       </IconButton>
     </Flex>
-  )
-}
+  );
+};
 
-export default GlobalSettings
+export default GlobalSettings;

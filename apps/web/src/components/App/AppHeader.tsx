@@ -1,17 +1,25 @@
-import styled from 'styled-components'
-import { Text, Flex, Heading, IconButton, ArrowBackIcon, NotificationDot, QuestionHelper } from '@pancakeswap/uikit'
-import { useExpertModeManager } from '../../state/user/hooks'
-import GlobalSettings from '../Menu/GlobalSettings'
-import Link from 'next/link'
-import Transactions from './Transactions'
-import { SettingsMode } from '../Menu/GlobalSettings/types'
+import styled from "styled-components";
+import {
+  Text,
+  Flex,
+  Heading,
+  IconButton,
+  ArrowBackIcon,
+  NotificationDot,
+  QuestionHelper,
+} from "@pancakeswap/uikit";
+import { useExpertModeManager } from "../../state/user/hooks";
+import GlobalSettings from "../Menu/GlobalSettings";
+import Link from "next/link";
+import Transactions from "./Transactions";
+import { SettingsMode } from "../Menu/GlobalSettings/types";
 
 interface Props {
-  title: string
-  subtitle?: string
-  helper?: string
-  backTo?: string | (() => void)
-  noConfig?: boolean
+  title: string;
+  subtitle?: string;
+  helper?: string;
+  backTo?: string | (() => void);
+  noConfig?: boolean;
 }
 
 const AppHeaderContainer = styled(Flex)`
@@ -20,16 +28,22 @@ const AppHeaderContainer = styled(Flex)`
   padding: 24px;
   width: 100%;
   border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
-`
+`;
 
-const AppHeader: React.FC<React.PropsWithChildren<Props>> = ({ title, subtitle, helper, backTo, noConfig = false }) => {
-  const [expertMode] = useExpertModeManager()
+const AppHeader: React.FC<React.PropsWithChildren<Props>> = ({
+  title,
+  subtitle,
+  helper,
+  backTo,
+  noConfig = false,
+}) => {
+  const [expertMode] = useExpertModeManager();
 
   return (
     <AppHeaderContainer>
-      <Flex alignItems="center" width="100%" style={{ gap: '16px' }}>
+      <Flex alignItems="center" width="100%" style={{ gap: "16px" }}>
         {backTo &&
-          (typeof backTo === 'string' ? (
+          (typeof backTo === "string" ? (
             <Link passHref href={backTo} prefetch={false}>
               <IconButton as="a" scale="sm">
                 <ArrowBackIcon width="32px" />
@@ -44,7 +58,9 @@ const AppHeader: React.FC<React.PropsWithChildren<Props>> = ({ title, subtitle, 
           <Flex mb="8px" alignItems="center" justifyContent="space-between">
             <Flex>
               <Heading as="h2">{title}</Heading>
-              {helper && <QuestionHelper text={helper} ml="4px" placement="top-start" />}
+              {helper && (
+                <QuestionHelper text={helper} ml="4px" placement="top-start" />
+              )}
             </Flex>
             {!noConfig && (
               <Flex alignItems="center">
@@ -63,7 +79,7 @@ const AppHeader: React.FC<React.PropsWithChildren<Props>> = ({ title, subtitle, 
         </Flex>
       </Flex>
     </AppHeaderContainer>
-  )
-}
+  );
+};
 
-export default AppHeader
+export default AppHeader;
