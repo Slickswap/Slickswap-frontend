@@ -51,6 +51,7 @@ const Stats = () => {
     flex-direction: column;
     justify-content: space-between;
     background: #004bad;
+    border-radius: 16px;
     width: 100%;
     height: 346px;
     color: #fff;

@@ -10,6 +10,7 @@ import CompositeImage, { CompositeImageProps } from "../CompositeImage";
 // import ColoredWordHeading from "../ColoredWordHeading";
 import styled from "styled-components";
 import { useState } from "react";
+import useTheme from "hooks/useTheme";
 
 interface SalesSectionButton {
   to: string;
@@ -37,6 +38,8 @@ const SalesSection: React.FC<React.PropsWithChildren<SalesSectionProps>> = (
     secondaryButton,
     images,
   } = props;
+
+  const { theme } = useTheme();
 
   const [isHovered, setIsHovered] = useState(false);
 
@@ -78,14 +81,17 @@ const SalesSection: React.FC<React.PropsWithChildren<SalesSectionProps>> = (
         >
           {/* <ColoredWordHeading text={headingText} /> */}
           <Heading
-            color={reverse ? "#fff" : "#000B1A"}
+            color={theme.isDark ? "#f4eeff" : reverse ? "#f4eeff" : "#000B1A"}
             fontWeight="bold"
             scale="xl"
             mb="16px"
           >
             {headingText}
           </Heading>
-          <Text color={reverse ? "#fff" : "#000B1A"} mb="24px">
+          <Text
+            color={theme.isDark ? "#f4eeff" : reverse ? "#f4eeff" : "#000B1A"}
+            mb="24px"
+          >
             {bodyText}
           </Text>
           {reverse ? null : (
