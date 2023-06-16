@@ -9,7 +9,7 @@ const Logo: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
     <div {...props} style={{ alignItems: "center", ...props.style }}>
       <img src="/images/slickswap.png" alt="slickswap" width="32px" style={{ verticalAlign: "middle" }} />
       {/* <span style={{ verticalAlign: "middle", fontSize: "1.2rem", fontWeight: "bold" }}>IceCreamSwap</span> */}
-      <img src="/images/SlickSwap.png" alt="slickswap" width="95%" style={{ verticalAlign: "middle" }} />
+      <img src="/images/slickswap-word.png" alt="slickswap" width="95%" style={{ verticalAlign: "middle" }} />
     </div>
   );
 

@@ -214,42 +214,42 @@ const config: (
           href: "/locks",
           supportChainIds: SUPPORT_LOCKS,
         },
-        {
-          label: t("KYC"),
-          href: "/kyc",
-          supportChainIds: [1116],
-          items: [
-            {
-              label: t("KYC"),
-              href: "/kyc",
-            },
-            {
-              label: t("KYC Checker"),
-              href: "/kyc-checker",
-            },
-          ],
-        },
+        // {
+        //   label: t("KYC"),
+        //   href: "/kyc",
+        //   supportChainIds: [1116],
+        //   items: [
+        //     {
+        //       label: t("KYC"),
+        //       href: "/kyc",
+        //     },
+        //     {
+        //       label: t("KYC Checker"),
+        //       href: "/kyc-checker",
+        //     },
+        //   ],
+        // },
 
-        {
-          label: t("KYC Checker"),
-          href: "/kyc-checker",
-          supportChainIds: [1116],
-          items: [
-            {
-              label: t("KYC"),
-              href: "/kyc",
-            },
-            {
-              label: t("KYC Checker"),
-              href: "/kyc-checker",
-            },
-          ],
-        },
-        {
-          label: t("Wiki"),
-          href: "https://wiki.icecreamswap.com",
-          type: DropdownMenuItemType.EXTERNAL_LINK,
-        },
+        // {
+        //   label: t("KYC Checker"),
+        //   href: "/kyc-checker",
+        //   supportChainIds: [1116],
+        //   items: [
+        //     {
+        //       label: t("KYC"),
+        //       href: "/kyc",
+        //     },
+        //     {
+        //       label: t("KYC Checker"),
+        //       href: "/kyc-checker",
+        //     },
+        //   ],
+        // },
+        // {
+        //   label: t("Wiki"),
+        //   href: "https://wiki.icecreamswap.com",
+        //   type: DropdownMenuItemType.EXTERNAL_LINK,
+        // },
         // {
         //   label: t('Create Token'),
         //   href: '/create-token',

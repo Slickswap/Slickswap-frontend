@@ -1,5 +1,5 @@
 $ npx tsx scripts/build.ts
-npm WARN exec The following package was not found and will be installed: tsx@3.12.7
+npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
 save farm config...
 Starting build farm config 56
 Farm list saved to  D:\Projects\Slickswap\Slickswap-frontend\packages\farms/lists/56.json

@@ -82,16 +82,21 @@ const Hero = () => {
         id="homepage-hero"
       >
         <Flex flex="1" flexDirection="column">
-          <Heading as="h1" scale="xxl" color="secondary" mb="24px">
-            {t('Trade Cryptocurrencies Without a Third Party')}
+          <Heading as="h1" scale="xxl" color="white" mb="24px">
+            {t('Trade Crypto without a third party')}
           </Heading>
-          <Heading as="p" scale="md" mb="24px">
+          <Heading as="p" scale="md" color="white" mb="24px">
+
+            Trade with confidence, buy and sell without intermediaries. Enjoy the freedom of trading on non-custodial platform.
+
+          </Heading>
+          {/* <Heading as="p" scale="md" mb="24px">
             Trade, Earn, Bridge and Launch on {" "}
             <Link href="/core" display="inline-flex">
               CORE
             </Link>
             , XDC, Binance smart chain (BSC), Bitgert (Brise), Shardeum, Dogechain, Doken and Fuse with our decentralized smart contracts.
-          </Heading>
+          </Heading> */}
           <Flex>
             {!account && <ConnectWalletButton mr="8px" />}
             <NextLinkFromReactRouter to="/swap">

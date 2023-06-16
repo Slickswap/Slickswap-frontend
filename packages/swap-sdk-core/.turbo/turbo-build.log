@@ -5,10 +5,10 @@ $ tsup src/index.ts --format esm,cjs --dts
 [34mCLI[39m Target: node12
 [34mESM[39m Build start
 [34mCJS[39m Build start
-[32mCJS[39m ⚡️ Build success in 1654ms
-[32mESM[39m ⚡️ Build success in 1765ms
-[32mCJS[39m [1mdist\index.js [22m[32m18.74 KB[39m
-[32mESM[39m [1mdist\index.mjs [22m[32m14.75 KB[39m
 [34mDTS[39m Build start
-[32mDTS[39m ⚡️ Build success in 23970ms
+[32mCJS[39m ⚡️ Build success in 3711ms
+[32mESM[39m ⚡️ Build success in 3929ms
+[32mESM[39m [1mdist\index.mjs [22m[32m14.75 KB[39m
+[32mCJS[39m [1mdist\index.js [22m[32m18.74 KB[39m
+[32mDTS[39m ⚡️ Build success in 36690ms
 [32mDTS[39m [1mdist\index.d.ts [22m[32m9.94 KB[39m
