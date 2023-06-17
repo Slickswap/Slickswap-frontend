@@ -10,32 +10,37 @@ import { isStableFarm, SerializedFarmConfig } from './types'
 import { getFullDecimalMultiplier } from './getFullDecimalMultiplier'
 
 const evmNativeStableLpMap = {
-  [ChainId.BITGERT]: {
-    address: '0x8e7dd0d762f60942e0bd05b1114d6cedf4435a18',
-    wNative: 'WBRISE',
-    stable: 'USDTi',
-  },
-  [ChainId.DOGE]: {
-    address: '0x95b9d21a77e91b8c4b7c57628e9fc7d34d1d7379',
-    wNative: 'WDOGE',
-    stable: 'USDT',
-  },
-  [ChainId.DOKEN]: {
-    address: '0x3ef68d91d420fecc9bbb1b95382f14a19de3f3bb',
-    wNative: 'WDOKEN',
-    stable: 'USDT',
-  },
-  [ChainId.FUSE]: {
-    address: '0x0000000000000000000000000000000000000000',  // todo: add Fuse stable LP
-    wNative: 'WFUSE',
-    stable: 'USDT',
-  },
-  [ChainId.XDC]: {
-    address: '0xe9450d66a493C3ae6eBC3Bb0B2B01a5107ea8bDb',
-    wNative: 'WXDC',
-    stable: 'USDT',
-  },
-  [ChainId.CORE]: {
+  // [ChainId.BITGERT]: {
+  //   address: '0x8e7dd0d762f60942e0bd05b1114d6cedf4435a18',
+  //   wNative: 'WBRISE',
+  //   stable: 'USDTi',
+  // },
+  // [ChainId.DOGE]: {
+  //   address: '0x95b9d21a77e91b8c4b7c57628e9fc7d34d1d7379',
+  //   wNative: 'WDOGE',
+  //   stable: 'USDT',
+  // },
+  // [ChainId.DOKEN]: {
+  //   address: '0x3ef68d91d420fecc9bbb1b95382f14a19de3f3bb',
+  //   wNative: 'WDOKEN',
+  //   stable: 'USDT',
+  // },
+  // [ChainId.FUSE]: {
+  //   address: '0x0000000000000000000000000000000000000000',  // todo: add Fuse stable LP
+  //   wNative: 'WFUSE',
+  //   stable: 'USDT',
+  // },
+  // [ChainId.XDC]: {
+  //   address: '0xe9450d66a493C3ae6eBC3Bb0B2B01a5107ea8bDb',
+  //   wNative: 'WXDC',
+  //   stable: 'USDT',
+  // },
+  // [ChainId.CORE]: {
+  //   address: '0x5ebAE3A840fF34B107D637c8Ed07C3D1D2017178',
+  //   wNative: 'WCORE',
+  //   stable: 'USDT',
+  // },
+  [ChainId.BASE]: {
     address: '0x5ebAE3A840fF34B107D637c8Ed07C3D1D2017178',
     wNative: 'WCORE',
     stable: 'USDT',

@@ -171,8 +171,8 @@ export const useCakeBusdPrice = (
   // Return bsc testnet cake if chain is testnet
   const cake: Token = isTestnet ? ICE[ChainId.BSC_TESTNET] : ICE[ChainId.BSC]
   */
-  const cake: Token = ICE[ChainId.BITGERT]
-  return usePriceByPairs(USD[cake.chainId], cake)
+  const slick: Token = ICE[ChainId.BASE]
+  return usePriceByPairs(USD[slick.chainId], slick)
 }
 
 // @Note: only fetch from one pair

@@ -1,6 +1,7 @@
 import { ChainId, JSBI, Percent, Token } from '@pancakeswap/sdk'
 import { BigNumber } from '@ethersproject/bignumber'
-import { bitgertTokens, coreTokens, dogechainTokens, dokenTokens, fuseTokens, xdcTokens, baseTokens } from '@pancakeswap/tokens'
+// import { bitgertTokens, coreTokens, dogechainTokens, dokenTokens, fuseTokens, xdcTokens,
+import { baseTokens } from '@pancakeswap/tokens'
 import { ChainMap, ChainTokenList, RouterAddressTypes } from './types'
 
 export const ROUTER_ADDRESS_COMMON = '0xBb5e1777A331ED93E07cF043363e48d320eb96c4'
@@ -11,45 +12,45 @@ export const ROUTER_ADDRESS_COMMON_AKKA_BASE = '0x298a3B9840C2be05f0f91832acdf67
 
 
 export const ROUTER_ADDRESS: Partial<ChainMap<RouterAddressTypes>> = {
-  [ChainId.BITGERT]: {
-    Icecream: ROUTER_ADDRESS_COMMON,
-    Akka: ROUTER_ADDRESS_COMMON_AKKA_BITGERT,
-  },
-  [ChainId.DOGE]: {
-    Icecream: ROUTER_ADDRESS_COMMON,
-  },
+  // [ChainId.BITGERT]: {
+  //   Icecream: ROUTER_ADDRESS_COMMON,
+  //   Akka: ROUTER_ADDRESS_COMMON_AKKA_BITGERT,
+  // },
+  // [ChainId.DOGE]: {
+  //   Icecream: ROUTER_ADDRESS_COMMON,
+  // },
   [ChainId.BASE]: {
     Icecream: ROUTER_ADDRESS_COMMON,
     Akka: ROUTER_ADDRESS_COMMON_AKKA_BASE
   },
-  [ChainId.DOKEN]: {
-    Icecream: ROUTER_ADDRESS_COMMON,
-  },
-  [ChainId.FUSE]: {
-    Icecream: ROUTER_ADDRESS_COMMON,
-  },
-  [ChainId.XDC]: {
-    Icecream: ROUTER_ADDRESS_COMMON,
-    Akka: ROUTER_ADDRESS_COMMON_AKKA_XDC,
-  },
-  [ChainId.BSC]: {
-    Icecream: ROUTER_ADDRESS_COMMON,
-  },
-  [ChainId.CORE]: {
-    Icecream: ROUTER_ADDRESS_COMMON,
-    Akka: ROUTER_ADDRESS_COMMON_AKKA_CORE,
-  },
+  // [ChainId.DOKEN]: {
+  //   Icecream: ROUTER_ADDRESS_COMMON,
+  // },
+  // [ChainId.FUSE]: {
+  //   Icecream: ROUTER_ADDRESS_COMMON,
+  // },
+  // [ChainId.XDC]: {
+  //   Icecream: ROUTER_ADDRESS_COMMON,
+  //   Akka: ROUTER_ADDRESS_COMMON_AKKA_XDC,
+  // },
+  // [ChainId.BSC]: {
+  //   Icecream: ROUTER_ADDRESS_COMMON,
+  // },
+  // [ChainId.CORE]: {
+  //   Icecream: ROUTER_ADDRESS_COMMON,
+  //   Akka: ROUTER_ADDRESS_COMMON_AKKA_CORE,
+  // },
 }
 
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: Partial<ChainTokenList> = {
-  [ChainId.BITGERT]: [bitgertTokens.wbrise, bitgertTokens.ice, bitgertTokens.usdci, bitgertTokens.usdti],
-  [ChainId.DOGE]: [dogechainTokens.wdoge, dogechainTokens.ice],
+  // [ChainId.BITGERT]: [bitgertTokens.wbrise, bitgertTokens.ice, bitgertTokens.usdci, bitgertTokens.usdti],
+  // [ChainId.DOGE]: [dogechainTokens.wdoge, dogechainTokens.ice],
   [ChainId.BASE]: [baseTokens.weth, baseTokens.slick],
-  [ChainId.DOKEN]: [dokenTokens.wdkn, dokenTokens.ice, dokenTokens.usdt],
-  [ChainId.FUSE]: [fuseTokens.wfuse, fuseTokens.ice],
-  [ChainId.XDC]: [xdcTokens.wxdc, xdcTokens.ice, xdcTokens.usdt],
-  [ChainId.CORE]: [coreTokens.wcore, coreTokens.score, coreTokens.ice, coreTokens.usdt],
+  // [ChainId.DOKEN]: [dokenTokens.wdkn, dokenTokens.ice, dokenTokens.usdt],
+  // [ChainId.FUSE]: [fuseTokens.wfuse, fuseTokens.ice],
+  // [ChainId.XDC]: [xdcTokens.wxdc, xdcTokens.ice, xdcTokens.usdt],
+  // [ChainId.CORE]: [coreTokens.wcore, coreTokens.score, coreTokens.ice, coreTokens.usdt],
 }
 
 /**
@@ -67,88 +68,88 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: Partial<ChainTokenList> = {
-  [ChainId.BITGERT]: [bitgertTokens.ice, bitgertTokens.usdti],
-  [ChainId.DOGE]: [dogechainTokens.ice],
+  // [ChainId.BITGERT]: [bitgertTokens.ice, bitgertTokens.usdti],
+  // [ChainId.DOGE]: [dogechainTokens.ice],
   [ChainId.BASE]: [baseTokens.slick],
-  [ChainId.DOKEN]: [dokenTokens.ice],
-  [ChainId.FUSE]: [fuseTokens.ice],
-  [ChainId.XDC]: [xdcTokens.ice, xdcTokens.usdt],
-  [ChainId.CORE]: [coreTokens.ice, coreTokens.score, coreTokens.usdt],
+  // [ChainId.DOKEN]: [dokenTokens.ice],
+  // [ChainId.FUSE]: [fuseTokens.ice],
+  // [ChainId.XDC]: [xdcTokens.ice, xdcTokens.usdt],
+  // [ChainId.CORE]: [coreTokens.ice, coreTokens.score, coreTokens.usdt],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: Partial<ChainTokenList> = {
-  [ChainId.BITGERT]: [
-    bitgertTokens.wbrise,
-    bitgertTokens.sphynx,
-    bitgertTokens.bpad,
-    bitgertTokens.broge,
-    bitgertTokens.brzilla,
-    bitgertTokens.btxt,
-    bitgertTokens.eltg,
-    bitgertTokens.evo,
-    bitgertTokens.map,
-    bitgertTokens.miidas,
-    bitgertTokens.mir,
-    bitgertTokens.numi,
-    bitgertTokens.omnia,
-    bitgertTokens.prds,
-    bitgertTokens.rluna,
-    bitgertTokens.vef,
-    bitgertTokens.wmf,
-    bitgertTokens.yogo,
-    bitgertTokens.ypc,
-    bitgertTokens.ice,
-    bitgertTokens.tokyo,
-    bitgertTokens.usdc,
-    bitgertTokens.usdt,
-    bitgertTokens.wolf,
-    bitgertTokens.usdti,
-    bitgertTokens.$3dc,
-    bitgertTokens.darrival,
-    bitgertTokens.ethi,
-    bitgertTokens.dogei,
-    bitgertTokens.bnbi,
-    bitgertTokens.shibi,
-    bitgertTokens.daii,
-    bitgertTokens.usdc,
-    bitgertTokens.busdi,
-    bitgertTokens.baskom,
-    bitgertTokens.abr,
-    bitgertTokens.lung,
-  ],
-  [ChainId.DOGE]: [dogechainTokens.wdoge, dogechainTokens.ice],
+  // [ChainId.BITGERT]: [
+  //   bitgertTokens.wbrise,
+  //   bitgertTokens.sphynx,
+  //   bitgertTokens.bpad,
+  //   bitgertTokens.broge,
+  //   bitgertTokens.brzilla,
+  //   bitgertTokens.btxt,
+  //   bitgertTokens.eltg,
+  //   bitgertTokens.evo,
+  //   bitgertTokens.map,
+  //   bitgertTokens.miidas,
+  //   bitgertTokens.mir,
+  //   bitgertTokens.numi,
+  //   bitgertTokens.omnia,
+  //   bitgertTokens.prds,
+  //   bitgertTokens.rluna,
+  //   bitgertTokens.vef,
+  //   bitgertTokens.wmf,
+  //   bitgertTokens.yogo,
+  //   bitgertTokens.ypc,
+  //   bitgertTokens.ice,
+  //   bitgertTokens.tokyo,
+  //   bitgertTokens.usdc,
+  //   bitgertTokens.usdt,
+  //   bitgertTokens.wolf,
+  //   bitgertTokens.usdti,
+  //   bitgertTokens.$3dc,
+  //   bitgertTokens.darrival,
+  //   bitgertTokens.ethi,
+  //   bitgertTokens.dogei,
+  //   bitgertTokens.bnbi,
+  //   bitgertTokens.shibi,
+  //   bitgertTokens.daii,
+  //   bitgertTokens.usdc,
+  //   bitgertTokens.busdi,
+  //   bitgertTokens.baskom,
+  //   bitgertTokens.abr,
+  //   bitgertTokens.lung,
+  // ],
+  // [ChainId.DOGE]: [dogechainTokens.wdoge, dogechainTokens.ice],
   [ChainId.BASE]: [baseTokens.weth, baseTokens.slick],
-  [ChainId.DOKEN]: [dokenTokens.wdkn, dokenTokens.ice, dokenTokens.usdt],
-  [ChainId.FUSE]: [fuseTokens.wfuse, fuseTokens.ice],
-  [ChainId.XDC]: [xdcTokens.wxdc, xdcTokens.ice, xdcTokens.usdt, xdcTokens.usdc],
-  [ChainId.CORE]: [coreTokens.wcore, coreTokens.score, coreTokens.ice, coreTokens.usdt],
+  // [ChainId.DOKEN]: [dokenTokens.wdkn, dokenTokens.ice, dokenTokens.usdt],
+  // [ChainId.FUSE]: [fuseTokens.wfuse, fuseTokens.ice],
+  // [ChainId.XDC]: [xdcTokens.wxdc, xdcTokens.ice, xdcTokens.usdt, xdcTokens.usdc],
+  // [ChainId.CORE]: [coreTokens.wcore, coreTokens.score, coreTokens.ice, coreTokens.usdt],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
-  [ChainId.BITGERT]: [
-    [bitgertTokens.wbrise, bitgertTokens.ice],
-    [bitgertTokens.usdti, bitgertTokens.ice],
-  ],
-  [ChainId.DOGE]: [
-    [dogechainTokens.wdoge, dogechainTokens.ice],
-    [dogechainTokens.usdt, dogechainTokens.ice],
-  ],
+  // [ChainId.BITGERT]: [
+  //   [bitgertTokens.wbrise, bitgertTokens.ice],
+  //   [bitgertTokens.usdti, bitgertTokens.ice],
+  // ],
+  // [ChainId.DOGE]: [
+  //   [dogechainTokens.wdoge, dogechainTokens.ice],
+  //   [dogechainTokens.usdt, dogechainTokens.ice],
+  // ],
   [ChainId.BASE]: [
     [baseTokens.weth, baseTokens.slick],
     [baseTokens.usdt, baseTokens.slick],
   ],
-  [ChainId.DOKEN]: [[dokenTokens.wdkn, dokenTokens.ice]],
-  [ChainId.FUSE]: [[fuseTokens.wfuse, fuseTokens.ice]],
-  [ChainId.XDC]: [
-    [xdcTokens.wxdc, xdcTokens.ice],
-    [xdcTokens.usdt, xdcTokens.ice],
-  ],
-  [ChainId.CORE]: [
-    [coreTokens.score, coreTokens.ice],
-    [coreTokens.score, coreTokens.wcore],
-    [coreTokens.usdt, coreTokens.ice],
-  ],
+  // [ChainId.DOKEN]: [[dokenTokens.wdkn, dokenTokens.ice]],
+  // [ChainId.FUSE]: [[fuseTokens.wfuse, fuseTokens.ice]],
+  // [ChainId.XDC]: [
+  //   [xdcTokens.wxdc, xdcTokens.ice],
+  //   [xdcTokens.usdt, xdcTokens.ice],
+  // ],
+  // [ChainId.CORE]: [
+  //   [coreTokens.score, coreTokens.ice],
+  //   [coreTokens.score, coreTokens.wcore],
+  //   [coreTokens.usdt, coreTokens.ice],
+  // ],
 }
 
 export const BIG_INT_ZERO = JSBI.BigInt(0)

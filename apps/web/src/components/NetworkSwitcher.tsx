@@ -82,7 +82,7 @@ const WrongNetworkSelect = ({ switchNetwork, chainId }) => {
     }
   );
   const { chain } = useNetwork();
-  const localChainId = useLocalNetworkChain() || ChainId.CORE;
+  const localChainId = useLocalNetworkChain() || ChainId.BASE;
   const [, setSessionChainId] = useSessionChainId();
 
   const localChainName =

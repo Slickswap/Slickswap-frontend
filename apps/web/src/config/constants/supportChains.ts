@@ -3,7 +3,7 @@ import { chains, ChainId } from '@icecreamswap/constants'
 
 export { SUPPORT_FARMS }
 
-export const SUPPORT_ONLY_BITGERT = [ChainId.BITGERT]
+export const SUPPORT_ONLY_BITGERT = [ChainId.BASE]
 
 export const SUPPORT_SWAP = chains.filter((chain) => chain.features.includes('swap')).map((chain) => chain.id)
 export const SUPPORT_STAKING = chains.filter((chain) => chain.features.includes('staking')).map((chain) => chain.id)

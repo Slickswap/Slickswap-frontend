@@ -1,5 +1,5 @@
 import { SerializedFarmConfig } from '../../types'
-import { bitgertTokens } from '@pancakeswap/tokens'
+import { baseTokens } from '@pancakeswap/tokens'
 
 const priceHelperLps: SerializedFarmConfig[] = [
   /**
@@ -13,8 +13,8 @@ const priceHelperLps: SerializedFarmConfig[] = [
     pid: null,
     lpSymbol: 'Miidas-Wbrise LP',
     lpAddress: '0xd98e4C6352F6D73bAa65c0A5DF2bdf68f4C9C18E',
-    token: bitgertTokens.miidas,
-    quoteToken: bitgertTokens.wbrise,
+    token: baseTokens.slick,
+    quoteToken: baseTokens.weth,
   },
 ].map((p) => ({ ...p, token: p.token.serialize, quoteToken: p.quoteToken.serialize }))
 

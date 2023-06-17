@@ -80,10 +80,10 @@ const Stats = () => {
         {/* </Heading> */}
         <Text width="75%" color="#fff">
           {t(
-            "We offer a wide variety of cryptocurrencies to choose from, including Bitcoin, ethereum, BNB and many more. A intuitive UI lets both new and experienced DeFi users easily interact with our smart contracts"
+            "We offer a wide variety of cryptocurrencies to choose from, including Bitcoin, Ethereum, Slick and many more. An intuitive UI lets both new and experienced DeFi users easily interact with our smart contracts"
           )}
           <br />
-          {/* {t("all utilizing our smart contracts available on multiple chains.")} */}
+          {t("Utilizing L2 scaling and multi-chain availability we aim to onboard billions of users.")}
         </Text>
         {/*
       <Flex flexWrap="wrap">

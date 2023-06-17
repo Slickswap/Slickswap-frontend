@@ -87,7 +87,7 @@ const Hero = () => {
           </Heading>
           <Heading as="p" scale="md" color="white" mb="24px">
 
-            Trade with confidence, buy and sell without intermediaries. Enjoy the freedom of trading on non-custodial platform.
+            Trade with confidence without giving up speed and great experience, buy and sell without intermediaries. Enjoy the freedom of decentralized trading that scales.
 
           </Heading>
           {/* <Heading as="p" scale="md" mb="24px">
