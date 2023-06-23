@@ -5,13 +5,13 @@ CLI tsup v5.12.9
 CLI Target: node12
 ESM Build start
 CJS Build start
-ESM ⚡️ Build success in 213ms
+ESM ⚡️ Build success in 184ms
+CJS ⚡️ Build success in 186ms
 ESM dist/index.mjs                 723.00 B
 ESM dist/server/nextApiHandler.mjs 5.87 KB
-CJS ⚡️ Build success in 129ms
 CJS dist/index.js                 1.77 KB
 CJS dist/server/nextApiHandler.js 7.27 KB
 DTS Build start
-DTS ⚡️ Build success in 26262ms
+DTS ⚡️ Build success in 31291ms
 DTS dist/index.d.ts                 32.81 KB
 DTS dist/server/nextApiHandler.d.ts 133.00 B

@@ -7,18 +7,18 @@ CLI Using tsup config: /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/pa
 CLI Target: node12
 ESM Build start
 CJS Build start
-ESM ⚡️ Build success in 154ms
+ESM ⚡️ Build success in 102ms
+CJS ⚡️ Build success in 90ms
 ESM dist/index.mjs                    2.25 KB
 ESM dist/connectors/miniProgram.mjs   2.14 KB
 ESM dist/connectors/binanceWallet.mjs 3.09 KB
 ESM dist/chains.mjs                   1.26 KB
-CJS ⚡️ Build success in 170ms
 CJS dist/index.js                    3.84 KB
 CJS dist/connectors/miniProgram.js   3.22 KB
 CJS dist/connectors/binanceWallet.js 4.17 KB
 CJS dist/chains.js                   2.24 KB
 DTS Build start
-DTS ⚡️ Build success in 19645ms
+DTS ⚡️ Build success in 20579ms
 DTS dist/index.d.ts                    1013.00 B
 DTS dist/connectors/miniProgram.d.ts   803.00 B
 DTS dist/connectors/binanceWallet.d.ts 1.23 KB
