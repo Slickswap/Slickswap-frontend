@@ -4,6 +4,7 @@ const chainName: Record<ChainId, string> = {
   // [ChainId.BITGERT]: 'Bitgert',
   // [ChainId.DOGE]: 'Doge',
   [ChainId.BASE]: 'Base',
+  [ChainId.LINEA]: 'Linea',
 }
 // [ChainId.DOKEN]: 'Doken',
 // [ChainId.FUSE]: 'Fuse',

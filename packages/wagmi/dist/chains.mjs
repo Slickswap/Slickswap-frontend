@@ -37,11 +37,51 @@ var base = {
   }
 };
 
+// ../constants/src/common/linea-swap.ts
+var FACTORY_ADDRESS2 = "0xdC667BCa5B37fCfE17EFAaA1026a35464F345924";
+var INIT_CODE_HASH2 = "0x8b35138574d7d8c69d827c70b18c34b66cc557802f2a1a757b3b1e90ff763a48";
+
+// ../constants/src/chains/linea.ts
+var linea = {
+  id: 59140,
+  name: "Linea Testnet",
+  features: ["swap", "farms"],
+  network: "linea",
+  rpcUrls: {
+    public: "https://rpc.goerli.linea.build/",
+    default: "https://rpc.goerli.linea.build/"
+  },
+  blockExplorers: {
+    default: { name: "Linear Testnet Explorer", url: "https://goerli.lineascan.build" }
+  },
+  nativeCurrency: {
+    name: "Ethereum",
+    symbol: "ETH",
+    decimals: 18
+  },
+  blockInterval: 2,
+  multicall: {
+    address: "0x96e2bc04FBa86361ecbF879575924f43d06Bf8cE",
+    blockCreated: 975028
+  },
+  wrappedNative: {
+    address: "0x2C1b868d6596a18e32E61B901E4060C872647b6C",
+    decimals: 18,
+    symbol: "WETH",
+    name: "Wrapped ETH"
+  },
+  swap: {
+    factoryAddress: FACTORY_ADDRESS2,
+    initCodeHash: INIT_CODE_HASH2
+  }
+};
+
 // ../constants/src/chains/index.ts
-var chainMap = { base };
+var chainMap = { base, linea };
 var chains = Object.values(chainMap);
 var ChainId = ((ChainId2) => {
   ChainId2[ChainId2["BASE"] = base.id] = "BASE";
+  ChainId2[ChainId2["LINEA"] = linea.id] = "LINEA";
   return ChainId2;
 })(ChainId || {});
 

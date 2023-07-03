@@ -1,4 +1,4 @@
-import { FACTORY_ADDRESS, INIT_CODE_HASH } from '../common/swap'
+import { FACTORY_ADDRESS, INIT_CODE_HASH } from '../common/base-swap'
 import IceChain from '../ice-chain'
 
 export const base: IceChain = {
@@ -20,8 +20,8 @@ export const base: IceChain = {
   },
   blockInterval: 2,
   multicall: {
-    address: '0xB90adcF0B0303017B824f3363796a22aEfB3e279',
-    blockCreated: 4354065, 
+    address: '0x6Dd3BE79402E197dd31A763a96C1300e4134Ad09',
+    blockCreated: 6255257, 
   },
   wrappedNative: {
     address: '0x4200000000000000000000000000000000000006',

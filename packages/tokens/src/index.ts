@@ -7,4 +7,5 @@ export * from './helpers'
 // export * from './50'
 // export * from './1116'
 export * from './84531'
+export * from './59140'
 export const bscTokens = {} as any

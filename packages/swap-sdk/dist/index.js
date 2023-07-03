@@ -161,7 +161,7 @@ var Pair = class {
   }
   constructor(currencyAmountA, tokenAmountB) {
     const tokenAmounts = currencyAmountA.currency.sortsBefore(tokenAmountB.currency) ? [currencyAmountA, tokenAmountB] : [tokenAmountB, currencyAmountA];
-    this.liquidityToken = new ERC20Token(tokenAmounts[0].currency.chainId, Pair.getAddress(tokenAmounts[0].currency, tokenAmounts[1].currency), 18, "ICELP", "icecreamswap.com LP");
+    this.liquidityToken = new ERC20Token(tokenAmounts[0].currency.chainId, Pair.getAddress(tokenAmounts[0].currency, tokenAmounts[1].currency), 18, "SLK-LP", "Slickswap LP");
     this.tokenAmounts = tokenAmounts;
   }
   involvesToken(token) {

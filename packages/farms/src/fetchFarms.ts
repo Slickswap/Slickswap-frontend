@@ -40,9 +40,16 @@ const evmNativeStableLpMap = {
   //   wNative: 'WCORE',
   //   stable: 'USDT',
   // },
+
+  // Todo: Add LP address of Wrapped Native token(WETH - token0) & stable (USDT - token1)
   [ChainId.BASE]: {
-    address: '0x5ebAE3A840fF34B107D637c8Ed07C3D1D2017178',
-    wNative: 'WCORE',
+    address: '',
+    wNative: 'WETH',
+    stable: 'USDT',
+  },
+  [ChainId.LINEA]: {
+    address: '',
+    wNative: 'WETH',
     stable: 'USDT',
   },
 }

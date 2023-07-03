@@ -1,10 +1,15 @@
 import { ChainId, JSBI, Percent, Token } from '@pancakeswap/sdk'
 import { BigNumber } from '@ethersproject/bignumber'
 // import { bitgertTokens, coreTokens, dogechainTokens, dokenTokens, fuseTokens, xdcTokens,
-import { baseTokens } from '@pancakeswap/tokens'
+import { baseTokens, lineaTokens } from '@pancakeswap/tokens'
 import { ChainMap, ChainTokenList, RouterAddressTypes } from './types'
 
 export const ROUTER_ADDRESS_COMMON = '0xBb5e1777A331ED93E07cF043363e48d320eb96c4'
+
+export const ROUTER_ADDRESS_COMMON_BASE = '0x78877c97A506Ed5798E90574cBeA9964F858E3D8'
+export const ROUTER_ADDRESS_COMMON_LINEA = '0xA6AD3bDbD47Ea2b1d5187E5eFa2410010A994648'
+
+
 export const ROUTER_ADDRESS_COMMON_AKKA_BITGERT = '0x25507a7323b04FD2687E72875aC4456C95782915'
 export const ROUTER_ADDRESS_COMMON_AKKA_XDC = '0xD16bBa1fB50aC0e7A3A5B5fD9fe99dee0d323A06'
 export const ROUTER_ADDRESS_COMMON_AKKA_CORE = '0xCDd7E3E30daC65940CB3b448CEF32d3dd5BbD107'
@@ -20,8 +25,14 @@ export const ROUTER_ADDRESS: Partial<ChainMap<RouterAddressTypes>> = {
   //   Icecream: ROUTER_ADDRESS_COMMON,
   // },
   [ChainId.BASE]: {
-    Icecream: ROUTER_ADDRESS_COMMON,
-    Akka: ROUTER_ADDRESS_COMMON_AKKA_BASE
+    Icecream: ROUTER_ADDRESS_COMMON_BASE,
+    // Icecream: ROUTER_ADDRESS_COMMON,
+    // Akka: ROUTER_ADDRESS_COMMON_AKKA_BASE
+  },
+  [ChainId.LINEA]: {
+    Icecream: ROUTER_ADDRESS_COMMON_LINEA,
+    // Icecream: ROUTER_ADDRESS_COMMON,
+    // Akka: ROUTER_ADDRESS_COMMON_AKKA_BASE
   },
   // [ChainId.DOKEN]: {
   //   Icecream: ROUTER_ADDRESS_COMMON,
@@ -47,6 +58,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: Partial<ChainTokenList> = {
   // [ChainId.BITGERT]: [bitgertTokens.wbrise, bitgertTokens.ice, bitgertTokens.usdci, bitgertTokens.usdti],
   // [ChainId.DOGE]: [dogechainTokens.wdoge, dogechainTokens.ice],
   [ChainId.BASE]: [baseTokens.weth, baseTokens.slick],
+  [ChainId.LINEA]: [lineaTokens.weth, lineaTokens.slick],
   // [ChainId.DOKEN]: [dokenTokens.wdkn, dokenTokens.ice, dokenTokens.usdt],
   // [ChainId.FUSE]: [fuseTokens.wfuse, fuseTokens.ice],
   // [ChainId.XDC]: [xdcTokens.wxdc, xdcTokens.ice, xdcTokens.usdt],
@@ -71,6 +83,7 @@ export const SUGGESTED_BASES: Partial<ChainTokenList> = {
   // [ChainId.BITGERT]: [bitgertTokens.ice, bitgertTokens.usdti],
   // [ChainId.DOGE]: [dogechainTokens.ice],
   [ChainId.BASE]: [baseTokens.slick],
+  [ChainId.LINEA]: [lineaTokens.slick],
   // [ChainId.DOKEN]: [dokenTokens.ice],
   // [ChainId.FUSE]: [fuseTokens.ice],
   // [ChainId.XDC]: [xdcTokens.ice, xdcTokens.usdt],
@@ -120,6 +133,7 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: Partial<ChainTokenList> = {
   // ],
   // [ChainId.DOGE]: [dogechainTokens.wdoge, dogechainTokens.ice],
   [ChainId.BASE]: [baseTokens.weth, baseTokens.slick],
+  [ChainId.LINEA]: [lineaTokens.weth, lineaTokens.slick],
   // [ChainId.DOKEN]: [dokenTokens.wdkn, dokenTokens.ice, dokenTokens.usdt],
   // [ChainId.FUSE]: [fuseTokens.wfuse, fuseTokens.ice],
   // [ChainId.XDC]: [xdcTokens.wxdc, xdcTokens.ice, xdcTokens.usdt, xdcTokens.usdc],
@@ -138,6 +152,10 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
   [ChainId.BASE]: [
     [baseTokens.weth, baseTokens.slick],
     [baseTokens.usdt, baseTokens.slick],
+  ],
+  [ChainId.LINEA]: [
+    [lineaTokens.weth, lineaTokens.slick],
+    [lineaTokens.usdt, lineaTokens.slick],
   ],
   // [ChainId.DOKEN]: [[dokenTokens.wdkn, dokenTokens.ice]],
   // [ChainId.FUSE]: [[fuseTokens.wfuse, fuseTokens.ice]],
