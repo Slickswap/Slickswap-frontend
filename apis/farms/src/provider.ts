@@ -1,5 +1,19 @@
 import { StaticJsonRpcProvider } from '@ethersproject/providers'
 
+export const baseProvider = new StaticJsonRpcProvider(
+  {
+    url: 'https://goerli.base.org',
+    skipFetchSetup: true,
+  },
+  84531,
+)
+export const lineaProvider = new StaticJsonRpcProvider(
+  {
+    url: 'https://rpc.goerli.linea.build',
+    skipFetchSetup: true,
+  },
+  59140,
+)
 export const bscProvider = new StaticJsonRpcProvider(
   {
     url: 'https://nodes.pancakeswap.com',

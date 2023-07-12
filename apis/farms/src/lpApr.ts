@@ -19,17 +19,21 @@ const LP_HOLDERS_FEE = 0.0017
 const WEEKS_IN_A_YEAR = 52.1429
 
 const BLOCKS_CLIENT_WITH_CHAIN = {
-  [ChainId.BITGERT]: 'https://graph.icecreamswap.com/subgraphs/name/simone1999/bitgert-blocks',
-  [ChainId.FUSE]: '',
-  [ChainId.DOGE]: '',
-  [ChainId.DOKEN]: '',
+  [ChainId.BASE]: '',
+  [ChainId.LINEA]: '',
+  // [ChainId.BITGERT]: 'https://graph.icecreamswap.com/subgraphs/name/simone1999/bitgert-blocks',
+  // [ChainId.FUSE]: '',
+  // [ChainId.DOGE]: '',
+  // [ChainId.DOKEN]: '',
 }
 
 const INFO_CLIENT_WITH_CHAIN = {
-  [ChainId.BITGERT]: 'https://graph.icecreamswap.com/subgraphs/name/simone1999/bitgert-uniswap',
-  [ChainId.FUSE]: '',
-  [ChainId.DOGE]: '',
-  [ChainId.DOKEN]: '',
+  [ChainId.BASE]: '',
+  [ChainId.LINEA]: '',
+  // [ChainId.BITGERT]: 'https://graph.icecreamswap.com/subgraphs/name/simone1999/bitgert-uniswap',
+  // [ChainId.FUSE]: '',
+  // [ChainId.DOGE]: '',
+  // [ChainId.DOKEN]: '',
 }
 
 const blockClientWithChain = (chainId: ChainId) => {
@@ -53,7 +57,7 @@ const getWeekAgoTimestamp = () => {
   return getUnixTime(weekAgo)
 }
 
-const getBlockAtTimestamp = async (timestamp: number, chainId = ChainId.BITGERT) => {
+const getBlockAtTimestamp = async (timestamp: number, chainId = ChainId.BASE) => {
   try {
     const { blocks } = await blockClientWithChain(chainId).request<BlockResponse>(
       `query getBlock($timestampGreater: Int!, $timestampLess: Int!) {
@@ -222,7 +226,8 @@ export const updateLPsAPR = async (chainId: number, allFarms: any[]) => {
 
   try {
     if (stableFarms?.length) {
-      const stableAprs: BigNumber[] = await Promise.all(stableFarms.map((f) => getAprsForStableFarm(f, chainId)))
+      const stableAprs: BigNumber[] = await Promise.all(stableFarms.map((f) => getAprsForStableFarm(f)))
+      // const stableAprs: BigNumber[] = await Promise.all(stableFarms.map((f) => getAprsForStableFarm(f, chainId)))
 
       const stableAprsMap = stableAprs.reduce(
         (result, apr, index) => ({

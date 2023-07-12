@@ -3,7 +3,7 @@ import IceChain from '../ice-chain'
 
 export const base: IceChain = {
   id: 84531,
-  name: 'Base Goerli Mainnet',
+  name: 'Base Goerli Testnet',
   features: ['swap', 'farms'],
   network: 'base',
   rpcUrls: {

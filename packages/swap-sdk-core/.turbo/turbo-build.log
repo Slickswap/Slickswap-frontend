@@ -6,9 +6,9 @@ $ tsup src/index.ts --format esm,cjs --dts
 [34mESM[39m Build start
 [34mCJS[39m Build start
 [34mDTS[39m Build start
-[32mCJS[39m ⚡️ Build success in 13664ms
-[32mCJS[39m [1mdist\index.js [22m[32m18.74 KB[39m
-[32mESM[39m ⚡️ Build success in 14197ms
+[32mESM[39m ⚡️ Build success in 7994ms
 [32mESM[39m [1mdist\index.mjs [22m[32m14.75 KB[39m
-[32mDTS[39m ⚡️ Build success in 33962ms
+[32mCJS[39m ⚡️ Build success in 11662ms
+[32mCJS[39m [1mdist\index.js [22m[32m18.74 KB[39m
+[32mDTS[39m ⚡️ Build success in 26844ms
 [32mDTS[39m [1mdist\index.d.ts [22m[32m9.94 KB[39m

@@ -140,7 +140,7 @@ const masterChefV2Abi = [
     inputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
     name: 'poolInfo',
     outputs: [
-      { internalType: 'uint256', name: 'accIcePerShare', type: 'uint256' },
+      { internalType: 'uint256', name: 'accSlickPerShare', type: 'uint256' },
       { internalType: 'uint256', name: 'lastRewardBlock', type: 'uint256' },
       { internalType: 'uint256', name: 'allocPoint', type: 'uint256' },
       { internalType: 'uint256', name: 'totalBoostedShare', type: 'uint256' },
@@ -172,7 +172,7 @@ const masterChefV2Abi = [
   },
   {
     inputs: [{ internalType: 'bool', name: '_isRegular', type: 'bool' }],
-    name: 'icePerBlock',
+    name: 'slickPerBlock',
     outputs: [{ internalType: 'uint256', name: 'amount', type: 'uint256' }],
     stateMutability: 'view',
     type: 'function',
@@ -251,7 +251,7 @@ export const fetchMasterChefV2Data = async ({
         },
         {
           address: masterChefAddress,
-          name: 'icePerBlock',
+          name: 'slickPerBlock',
           params: [true],
         },
       ],

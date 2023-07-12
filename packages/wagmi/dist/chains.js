@@ -24,14 +24,14 @@ __export(chains_exports, {
 });
 module.exports = __toCommonJS(chains_exports);
 
-// ../constants/src/common/swap.ts
-var FACTORY_ADDRESS = "0x1932C94E65eE132d251d267600542074365AE983";
+// ../constants/src/common/base-swap.ts
+var FACTORY_ADDRESS = "0x05F2D5C58E137D2b258fA842c67134dE1F45fC11";
 var INIT_CODE_HASH = "0x8b35138574d7d8c69d827c70b18c34b66cc557802f2a1a757b3b1e90ff763a48";
 
 // ../constants/src/chains/base.ts
 var base = {
   id: 84531,
-  name: "Base Goerli Mainnet",
+  name: "Base Goerli Testnet",
   features: ["swap", "farms"],
   network: "base",
   rpcUrls: {
@@ -48,8 +48,8 @@ var base = {
   },
   blockInterval: 2,
   multicall: {
-    address: "0xB90adcF0B0303017B824f3363796a22aEfB3e279",
-    blockCreated: 4354065
+    address: "0x6Dd3BE79402E197dd31A763a96C1300e4134Ad09",
+    blockCreated: 6255257
   },
   wrappedNative: {
     address: "0x4200000000000000000000000000000000000006",

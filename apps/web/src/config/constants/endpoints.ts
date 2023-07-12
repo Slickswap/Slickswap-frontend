@@ -9,6 +9,11 @@ export const BLOCKS_CLIENT_XDC = 'https://graph-xdc.icecreamswap.com/subgraphs/n
 export const INFO_CLIENT_CORE = 'https://graph-core.icecreamswap.com/subgraphs/name/simone1999/icecreamswap-core'
 export const BLOCKS_CLIENT_CORE = 'https://graph-core.icecreamswap.com/subgraphs/name/icecreamswap/blocks-core'
 
+export const INFO_CLIENT_BASE = ''
+export const BLOCKS_CLIENT_BASE = ''
+
+export const INFO_CLIENT_LINEA = ''
+export const BLOCKS_CLIENT_LINEA = ''
 
 
 export const STABLESWAP_SUBGRAPH_CLIENT = 'https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-stableswap'
@@ -23,13 +28,17 @@ export const ACCESS_RISK_API = 'https://red.alert.pancakeswap.com/red-api'
 export const CELER_API = 'https://api.celerscan.com/scan'
 
 export const INFO_CLIENT_WITH_CHAIN = {
-  [ChainId.BITGERT]: INFO_CLIENT_BITGERT,
-  [ChainId.XDC]: INFO_CLIENT_XDC,
-  [ChainId.CORE]: INFO_CLIENT_CORE,
+  [ChainId.BASE]: INFO_CLIENT_BASE,
+  [ChainId.LINEA]: INFO_CLIENT_LINEA,
+  // [ChainId.BITGERT]: INFO_CLIENT_BITGERT,
+  // [ChainId.XDC]: INFO_CLIENT_XDC,
+  // [ChainId.CORE]: INFO_CLIENT_CORE,
 }
 
 export const BLOCKS_CLIENT_WITH_CHAIN: Partial<Record<ChainId, string>> = {
-  [ChainId.BITGERT]: BLOCKS_CLIENT_BITGERT,
-  [ChainId.XDC]: BLOCKS_CLIENT_XDC,
-  [ChainId.CORE]: BLOCKS_CLIENT_CORE,
+  [ChainId.BASE]: BLOCKS_CLIENT_BASE,
+  [ChainId.LINEA]: BLOCKS_CLIENT_LINEA,
+  // [ChainId.BITGERT]: BLOCKS_CLIENT_BITGERT,
+  // [ChainId.XDC]: BLOCKS_CLIENT_XDC,
+  // [ChainId.CORE]: BLOCKS_CLIENT_CORE,
 }

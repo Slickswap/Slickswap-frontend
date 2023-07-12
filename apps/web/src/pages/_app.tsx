@@ -80,7 +80,7 @@ function MyApp(props: AppProps<{ initialReduxState: any }>) {
         />
         <meta
           name="description"
-          content="Multi-chain DeFi ecosystem with Swap, Bridge and Launchpad. Trade, Bridge, Earn and Launch on Bitgert (Brise), Binance smart chain (BSC), XDC, Dogechain, Doken, Fuse and soon CORE blockchain"
+          content="Multi-chain DeFi ecosystem with Swap, Bridge and Launchpad. Trade, Bridge, Earn and Launch on BASE, LINEA blockchain"
         />
         <meta name="theme-color" content="#00aff6" />
         <meta
@@ -89,12 +89,12 @@ function MyApp(props: AppProps<{ initialReduxState: any }>) {
         />
         <meta
           name="twitter:description"
-          content="Multi-chain DeFi ecosystem with Swap, Bridge and Launchpad. Trade, Bridge, Earn and Launch on Bitgert (Brise), Binance smart chain (BSC), XDC, Dogechain, Doken, Fuse and soon CORE blockchain"
+          content="Multi-chain DeFi ecosystem with Swap, Bridge and Launchpad. Trade, Bridge, Earn and Launch on blockchain"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="🍦 IceCreamSwap - Trade, Earn, Bridge and Launch on CORE, XDC, Binance smart chain (BSC), Bitgert (Brise), Dogechain, Doken and Fuse via our decentralized Smart contracts."
+          content="SlickSwap - Trade, Earn, Bridge and Launch on BASE, LINEA via our decentralized Smart contracts."
         />
         <title>SlickSwap</title>
       </Head>
