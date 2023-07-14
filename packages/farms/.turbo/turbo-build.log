@@ -1,6 +1,5 @@
 $ npx tsx scripts/build.ts
-npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
 save farm config...
 Starting build farm config 84531
-Farm list saved to  D:\Projects\Slickswap\Slickswap-frontend\packages\farms/lists/84531.json
-Lp list saved to  D:\Projects\Slickswap\Slickswap-frontend\packages\farms/lists/priceHelperLps/84531.json
+Farm list saved to  /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/farms/lists/84531.json
+Lp list saved to  /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/farms/lists/priceHelperLps/84531.json

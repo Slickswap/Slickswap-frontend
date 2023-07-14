@@ -1,14 +1,14 @@
 $ tsup src/index.ts --format esm,cjs --dts
-[34mCLI[39m Building entry: src/index.ts
-[34mCLI[39m Using tsconfig: tsconfig.json
-[34mCLI[39m tsup v5.12.9
-[34mCLI[39m Target: node12
-[34mESM[39m Build start
-[34mCJS[39m Build start
-[34mDTS[39m Build start
-[32mESM[39m ⚡️ Build success in 5022ms
-[32mCJS[39m ⚡️ Build success in 4896ms
-[32mESM[39m [1mdist\index.mjs [22m[32m22.60 KB[39m
-[32mCJS[39m [1mdist\index.js [22m[32m27.52 KB[39m
-[32mDTS[39m ⚡️ Build success in 16518ms
-[32mDTS[39m [1mdist\index.d.ts [22m[32m12.45 KB[39m
+CLI Building entry: src/index.ts
+CLI Using tsconfig: tsconfig.json
+CLI tsup v5.12.9
+CLI Target: node12
+ESM Build start
+CJS Build start
+ESM ⚡️ Build success in 254ms
+ESM dist/index.mjs 22.60 KB
+CJS ⚡️ Build success in 257ms
+CJS dist/index.js 27.52 KB
+DTS Build start
+DTS ⚡️ Build success in 12121ms
+DTS dist/index.d.ts 12.22 KB

@@ -1,6 +1,6 @@
 // ../constants/src/common/base-swap.ts
-var FACTORY_ADDRESS = "0x05F2D5C58E137D2b258fA842c67134dE1F45fC11";
-var INIT_CODE_HASH = "0x8b35138574d7d8c69d827c70b18c34b66cc557802f2a1a757b3b1e90ff763a48";
+var FACTORY_ADDRESS = "0x5eD80bB065EC0C440586B3C5Bfc81c34E816240B";
+var INIT_CODE_HASH = "0xa557a44bea3a484d84bdf591822a84ee263e65b08fd154bed7b6a7c36083fb51";
 
 // ../constants/src/chains/base.ts
 var base = {

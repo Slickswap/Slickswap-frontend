@@ -211,19 +211,19 @@ declare const appRouter: _trpc_server.CreateRouterInner<_trpc_server.RootConfig<
                 res: next_types.NextApiResponse<any>;
             };
             _input_in: {
+                chainId: number;
                 tokenAddress: string;
                 tokenName: string;
                 tokenSymbol: string;
                 tokenDecimals: number;
-                chainId: number;
                 logo?: string | undefined;
             };
             _input_out: {
+                chainId: number;
                 tokenAddress: string;
                 tokenName: string;
                 tokenSymbol: string;
                 tokenDecimals: number;
-                chainId: number;
                 logo?: string | undefined;
             };
             _output_in: typeof _trpc_server.unsetMarker;
@@ -477,19 +477,19 @@ declare const trpc: _trpc_next.CreateTRPCNextBase<_trpc_server.CreateRouterInner
                 res: next_types.NextApiResponse<any>;
             };
             _input_in: {
+                chainId: number;
                 tokenAddress: string;
                 tokenName: string;
                 tokenSymbol: string;
                 tokenDecimals: number;
-                chainId: number;
                 logo?: string | undefined;
             };
             _input_out: {
+                chainId: number;
                 tokenAddress: string;
                 tokenName: string;
                 tokenSymbol: string;
                 tokenDecimals: number;
-                chainId: number;
                 logo?: string | undefined;
             };
             _output_in: typeof _trpc_server.unsetMarker;
@@ -729,19 +729,19 @@ declare const trpc: _trpc_next.CreateTRPCNextBase<_trpc_server.CreateRouterInner
                 res: next_types.NextApiResponse<any>;
             };
             _input_in: {
+                chainId: number;
                 tokenAddress: string;
                 tokenName: string;
                 tokenSymbol: string;
                 tokenDecimals: number;
-                chainId: number;
                 logo?: string | undefined;
             };
             _input_out: {
+                chainId: number;
                 tokenAddress: string;
                 tokenName: string;
                 tokenSymbol: string;
                 tokenDecimals: number;
-                chainId: number;
                 logo?: string | undefined;
             };
             _output_in: typeof _trpc_server.unsetMarker;
@@ -831,17 +831,18 @@ declare const trpcClient: {
     token: {
         add: {
             mutate: (input: {
+                chainId: number;
                 tokenAddress: string;
                 tokenName: string;
                 tokenSymbol: string;
                 tokenDecimals: number;
-                chainId: number;
                 logo?: string | undefined;
             }, opts?: _trpc_server.ProcedureOptions | undefined) => Promise<never>;
         };
         defaultList: {
             query: (input?: void | undefined, opts?: _trpc_server.ProcedureOptions | undefined) => Promise<{
                 name: string;
+                tags: _trpc_server_shared.SerializeObject<Pick<{}, never> & {}>;
                 logoURI: string;
                 timestamp: string;
                 version: _trpc_server_shared.SerializeObject<Pick<{
@@ -849,7 +850,6 @@ declare const trpcClient: {
                     minor: number;
                     patch: number;
                 }, "major" | "minor" | "patch"> & {}>;
-                tags: _trpc_server_shared.SerializeObject<Pick<{}, never> & {}>;
                 keywords: string[];
                 tokens: _trpc_server_shared.SerializeObject<Pick<{
                     name: string;
@@ -858,7 +858,7 @@ declare const trpcClient: {
                     chainId: number;
                     decimals: number;
                     logoURI: string;
-                }, "symbol" | "name" | "address" | "chainId" | "logoURI" | "decimals"> & {}>[];
+                }, "symbol" | "name" | "decimals" | "address" | "chainId" | "logoURI"> & {}>[];
             }>;
         };
     };

@@ -1,25 +1,25 @@
 warning package.json: License should be a valid SPDX license expression
 $ tsup
-[34mCLI[39m Building entry: {"index":"src/index.ts","connectors/miniProgram":"connectors/miniProgram/index.ts","connectors/binanceWallet":"connectors/binanceWallet/index.ts","chains":"chains/index.ts"}
-[34mCLI[39m Using tsconfig: tsconfig.json
-[34mCLI[39m tsup v5.12.9
-[34mCLI[39m Using tsup config: D:\Projects\Slickswap\Slickswap-frontend\packages\wagmi\tsup.config.ts
-[34mCLI[39m Target: node12
-[34mESM[39m Build start
-[34mCJS[39m Build start
-[34mDTS[39m Build start
-[32mESM[39m ⚡️ Build success in 5640ms
-[32mESM[39m [1mdist\index.mjs                    [22m[32m2.25 KB[39m
-[32mESM[39m [1mdist\chains.mjs                   [22m[32m2.31 KB[39m
-[32mESM[39m [1mdist\connectors\binanceWallet.mjs [22m[32m3.09 KB[39m
-[32mESM[39m [1mdist\connectors\miniProgram.mjs   [22m[32m2.14 KB[39m
-[32mCJS[39m ⚡️ Build success in 6294ms
-[32mCJS[39m [1mdist\index.js                    [22m[32m3.84 KB[39m
-[32mCJS[39m [1mdist\connectors\binanceWallet.js [22m[32m4.17 KB[39m
-[32mCJS[39m [1mdist\chains.js                   [22m[32m3.29 KB[39m
-[32mCJS[39m [1mdist\connectors\miniProgram.js   [22m[32m3.22 KB[39m
-[32mDTS[39m ⚡️ Build success in 30515ms
-[32mDTS[39m [1mdist\index.d.ts                    [22m[32m1.00 KB[39m
-[32mDTS[39m [1mdist\connectors\miniProgram.d.ts   [22m[32m830.00 B[39m
-[32mDTS[39m [1mdist\connectors\binanceWallet.d.ts [22m[32m1.26 KB[39m
-[32mDTS[39m [1mdist\chains.d.ts                   [22m[32m115.00 B[39m
+CLI Building entry: {"index":"src/index.ts","connectors/miniProgram":"connectors/miniProgram/index.ts","connectors/binanceWallet":"connectors/binanceWallet/index.ts","chains":"chains/index.ts"}
+CLI Using tsconfig: tsconfig.json
+CLI tsup v5.12.9
+CLI Using tsup config: /home/dezzy/Documents/gig/SlickSwap/Slickswap-frontend/packages/wagmi/tsup.config.ts
+CLI Target: node12
+ESM Build start
+CJS Build start
+ESM ⚡️ Build success in 237ms
+CJS ⚡️ Build success in 229ms
+ESM dist/index.mjs                    2.25 KB
+ESM dist/connectors/miniProgram.mjs   2.14 KB
+ESM dist/connectors/binanceWallet.mjs 3.09 KB
+ESM dist/chains.mjs                   2.31 KB
+CJS dist/index.js                    3.84 KB
+CJS dist/connectors/miniProgram.js   3.22 KB
+CJS dist/connectors/binanceWallet.js 4.17 KB
+CJS dist/chains.js                   3.29 KB
+DTS Build start
+DTS ⚡️ Build success in 25165ms
+DTS dist/index.d.ts                    1013.00 B
+DTS dist/connectors/miniProgram.d.ts   803.00 B
+DTS dist/connectors/binanceWallet.d.ts 1.23 KB
+DTS dist/chains.d.ts                   115.00 B
