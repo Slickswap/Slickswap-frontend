@@ -1,10 +1,14 @@
 {
+  "parserOptions": {
+    "sourceType": "module"
+  },
   "env": {
     "es6": true,
     "browser": true,
     "jest": true
   },
-  "plugins": ["lodash"],
+  "parser": "@babel/eslint-parser",
+  "plugins": ["lodash", "react-hooks"],
   "extends": ["plugin:@next/next/recommended"],
   "rules": {
     "no-restricted-syntax": 0,

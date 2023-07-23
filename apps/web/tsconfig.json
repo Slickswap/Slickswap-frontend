@@ -8,6 +8,7 @@
     }
   ],
   "extends": "tsconfig/nextjs.json",
+  
   "compilerOptions": {
     "baseUrl": "src",
     "strictNullChecks": false,

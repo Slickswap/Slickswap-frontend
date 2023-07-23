@@ -1,17 +1,17 @@
 $ tsup src/index.ts src/server/nextApiHandler.ts --format esm,cjs --dts
-CLI Building entry: src/index.ts, src/server/nextApiHandler.ts
-CLI Using tsconfig: tsconfig.json
-CLI tsup v5.12.9
-CLI Target: node12
-ESM Build start
-CJS Build start
-CJS ⚡️ Build success in 240ms
-ESM ⚡️ Build success in 273ms
-CJS dist/index.js                 1.77 KB
-CJS dist/server/nextApiHandler.js 7.27 KB
-ESM dist/index.mjs                 723.00 B
-ESM dist/server/nextApiHandler.mjs 5.87 KB
-DTS Build start
-DTS ⚡️ Build success in 32414ms
-DTS dist/index.d.ts                 32.81 KB
-DTS dist/server/nextApiHandler.d.ts 133.00 B
+[34mCLI[39m Building entry: src/index.ts, src/server/nextApiHandler.ts
+[34mCLI[39m Using tsconfig: tsconfig.json
+[34mCLI[39m tsup v5.12.9
+[34mCLI[39m Target: node12
+[34mESM[39m Build start
+[34mCJS[39m Build start
+[32mESM[39m ⚡️ Build success in 827ms
+[32mCJS[39m ⚡️ Build success in 428ms
+[32mESM[39m [1mdist\index.mjs                 [22m[32m723.00 B[39m
+[32mESM[39m [1mdist\server\nextApiHandler.mjs [22m[32m5.87 KB[39m
+[32mCJS[39m [1mdist\index.js                 [22m[32m1.77 KB[39m
+[32mCJS[39m [1mdist\server\nextApiHandler.js [22m[32m7.27 KB[39m
+[34mDTS[39m Build start
+[32mDTS[39m ⚡️ Build success in 63647ms
+[32mDTS[39m [1mdist\index.d.ts                 [22m[32m33.64 KB[39m
+[32mDTS[39m [1mdist\server\nextApiHandler.d.ts [22m[32m133.00 B[39m
