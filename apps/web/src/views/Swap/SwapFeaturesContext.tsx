@@ -1,8 +1,8 @@
-import React, {createContext, useEffect, useMemo, useState} from 'react'
-import {useMatchBreakpoints} from '@pancakeswap/uikit'
-import {useExchangeChartManager} from 'state/user/hooks'
-import {useActiveChainId} from 'hooks/useActiveChainId'
-import {SUPPORT_INFO} from "../../config/constants/supportChains";
+import React, { createContext, useEffect, useMemo, useState } from 'react'
+import { useMatchBreakpoints } from '@pancakeswap/uikit'
+import { useExchangeChartManager } from 'state/user/hooks'
+import { useActiveChainId } from 'hooks/useActiveChainId'
+import { SUPPORT_INFO } from "../../config/constants/supportChains";
 
 export const SwapFeaturesContext = createContext<{
   isChartSupported: boolean
