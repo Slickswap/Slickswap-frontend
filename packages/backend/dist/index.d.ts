@@ -842,7 +842,6 @@ declare const trpcClient: {
         defaultList: {
             query: (input?: void | undefined, opts?: _trpc_server.ProcedureOptions | undefined) => Promise<{
                 name: string;
-                tags: _trpc_server_shared.SerializeObject<Pick<{}, never> & {}>;
                 logoURI: string;
                 timestamp: string;
                 version: _trpc_server_shared.SerializeObject<Pick<{
@@ -850,6 +849,7 @@ declare const trpcClient: {
                     minor: number;
                     patch: number;
                 }, "major" | "minor" | "patch"> & {}>;
+                tags: _trpc_server_shared.SerializeObject<Pick<{}, never> & {}>;
                 keywords: string[];
                 tokens: _trpc_server_shared.SerializeObject<Pick<{
                     name: string;

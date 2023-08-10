@@ -1,6 +1,7 @@
 {
   "extends": "tsconfig/nextjs.json",
   "compilerOptions": {
+    "composite": true,
     "baseUrl": "src",
     "strictNullChecks": true,
     "noImplicitAny": false,

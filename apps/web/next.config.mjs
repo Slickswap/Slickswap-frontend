@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import BundleAnalyzer from '@next/bundle-analyzer'
-import { withSentryConfig } from '@sentry/nextjs'
+import BundleAnalyzer from "@next/bundle-analyzer";
+import { withSentryConfig } from "@sentry/nextjs";
 
 const withBundleAnalyzer = BundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
-})
+  enabled: process.env["ANALYZE"] === "true",
+});
 
 const sentryWebpackPluginOptions =
-  process.env.VERCEL_ENV === 'production'
+  process.env["VERCEL_ENV"] === "production"
     ? {
         // Additional config options for the Sentry Webpack plugin. Keep in mind that
         // the following options are set automatically, and overriding them is not
@@ -22,7 +22,7 @@ const sentryWebpackPluginOptions =
     : {
         silent: true, // Suppresses all logs
         dryRun: !process.env.SENTRY_AUTH_TOKEN,
-      }
+      };
 
 /** @type {import('next').NextConfig} */
 const config = {
@@ -30,21 +30,21 @@ const config = {
     styledComponents: true,
   },
   experimental: {
-    swcPlugins: [["swc-plugin-vanilla-extract", {}]]
+    swcPlugins: [["swc-plugin-vanilla-extract", {}]],
   },
   transpilePackages: [
-    '@pancakeswap/ui',
-    '@pancakeswap/uikit',
-    '@pancakeswap/swap-sdk-core',
-    '@pancakeswap/farms',
-    '@pancakeswap/localization',
-    '@pancakeswap/hooks',
-    '@pancakeswap/multicall',
-    '@pancakeswap/token-lists',
-    '@pancakeswap/utils',
-    '@pancakeswap/tokens',
-    '@wagmi',
-    'wagmi',
+    "@pancakeswap/ui",
+    "@pancakeswap/uikit",
+    "@pancakeswap/swap-sdk-core",
+    "@pancakeswap/farms",
+    "@pancakeswap/localization",
+    "@pancakeswap/hooks",
+    "@pancakeswap/multicall",
+    "@pancakeswap/token-lists",
+    "@pancakeswap/utils",
+    "@pancakeswap/tokens",
+    "@wagmi",
+    "wagmi",
   ],
   reactStrictMode: true,
   swcMinify: true,
@@ -54,116 +54,119 @@ const config = {
   async rewrites() {
     return [
       {
-        source: '/default.tokenlist.json',
-        destination: "/api/trpc/token.defaultList"
+        source: "/default.tokenlist.json",
+        destination: "/api/trpc/token.defaultList",
       },
       {
-        source: '/info/token/:address',
-        destination: '/info/tokens/:address',
+        source: "/info/token/:address",
+        destination: "/info/tokens/:address",
       },
       {
-        source: '/info/pool/:address',
-        destination: '/info/pools/:address',
+        source: "/info/pool/:address",
+        destination: "/info/pools/:address",
       },
       {
-        source: '/info/pair/:address',
-        destination: '/info/pools/:address',
+        source: "/info/pair/:address",
+        destination: "/info/pools/:address",
       },
       {
-        source: '/kyc-meta',
-        destination: '/api/kyc-meta',
-      }
-    ]
+        source: "/kyc-meta",
+        destination: "/api/kyc-meta",
+      },
+    ];
   },
   async headers() {
     return [
       {
-        source: '/logo.png',
+        source: "/logo.png",
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'public, immutable, max-age=31536000',
+            key: "Cache-Control",
+            value: "public, immutable, max-age=31536000",
           },
         ],
       },
       {
-        source: '/images/:all*',
+        source: "/images/:all*",
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'public, immutable, max-age=31536000',
+            key: "Cache-Control",
+            value: "public, immutable, max-age=31536000",
           },
         ],
       },
       {
-        source: '/images/tokens/:all*',
+        source: "/images/tokens/:all*",
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'public, immutable, max-age=604800',
+            key: "Cache-Control",
+            value: "public, immutable, max-age=604800",
           },
         ],
       },
-    ]
+    ];
   },
   async redirects() {
     return [
       {
-        source: '/send',
-        destination: '/swap',
+        source: "/send",
+        destination: "/swap",
         permanent: true,
       },
       {
-        source: '/discord',
-        destination: 'https://discord.gg/rx6WGBPTty',
+        source: "/discord",
+        destination: "https://discord.gg/rx6WGBPTty",
         permanent: false,
       },
       {
-        source: '/telegram',
-        destination: 'https://t.me/Icecreamswap_com',
+        source: "/telegram",
+        destination: "https://t.me/Icecreamswap_com",
         permanent: false,
       },
       {
-        source: '/swap/:outputCurrency',
-        destination: '/swap?outputCurrency=:outputCurrency',
+        source: "/swap/:outputCurrency",
+        destination: "/swap?outputCurrency=:outputCurrency",
         permanent: true,
       },
       {
-        source: '/create/:currency*',
-        destination: '/add/:currency*',
+        source: "/create/:currency*",
+        destination: "/add/:currency*",
         permanent: true,
       },
       {
-        source: '/farms/archived',
-        destination: '/farms/history',
+        source: "/farms/archived",
+        destination: "/farms/history",
         permanent: true,
       },
       {
-        source: '/pool',
-        destination: '/liquidity',
+        source: "/pool",
+        destination: "/liquidity",
         permanent: true,
       },
       {
-        source: '/staking',
-        destination: '/pools',
+        source: "/staking",
+        destination: "/pools",
         permanent: true,
       },
       {
-        source: '/syrup',
-        destination: '/pools',
+        source: "/syrup",
+        destination: "/pools",
         permanent: true,
       },
       {
-        source: '/collectibles',
-        destination: '/nfts',
+        source: "/collectibles",
+        destination: "/nfts",
         permanent: true,
       },
-    ]
+    ];
   },
   typescript: {
-    tsconfigPath: 'tsconfig.build.json',
-    ignoreBuildErrors: true
-  }
-}
+    tsconfigPath: "tsconfig.build.json",
+    ignoreBuildErrors: true,
+  },
+};
 
-export default withSentryConfig(withBundleAnalyzer(config), sentryWebpackPluginOptions)
+export default withSentryConfig(
+  withBundleAnalyzer(config),
+  sentryWebpackPluginOptions
+);

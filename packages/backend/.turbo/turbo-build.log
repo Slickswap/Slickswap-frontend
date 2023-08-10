@@ -5,13 +5,13 @@ $ tsup src/index.ts src/server/nextApiHandler.ts --format esm,cjs --dts
 [34mCLI[39m Target: node12
 [34mESM[39m Build start
 [34mCJS[39m Build start
-[32mESM[39m ⚡️ Build success in 827ms
-[32mCJS[39m ⚡️ Build success in 428ms
-[32mESM[39m [1mdist\index.mjs                 [22m[32m723.00 B[39m
+[32mESM[39m ⚡️ Build success in 3956ms
+[32mCJS[39m ⚡️ Build success in 3658ms
 [32mESM[39m [1mdist\server\nextApiHandler.mjs [22m[32m5.87 KB[39m
-[32mCJS[39m [1mdist\index.js                 [22m[32m1.77 KB[39m
+[32mESM[39m [1mdist\index.mjs                 [22m[32m723.00 B[39m
 [32mCJS[39m [1mdist\server\nextApiHandler.js [22m[32m7.27 KB[39m
+[32mCJS[39m [1mdist\index.js                 [22m[32m1.77 KB[39m
 [34mDTS[39m Build start
-[32mDTS[39m ⚡️ Build success in 63647ms
+[32mDTS[39m ⚡️ Build success in 59004ms
 [32mDTS[39m [1mdist\index.d.ts                 [22m[32m33.64 KB[39m
 [32mDTS[39m [1mdist\server\nextApiHandler.d.ts [22m[32m133.00 B[39m
